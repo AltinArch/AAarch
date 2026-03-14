@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Altin Ademi — Architecture</title>
+  <meta name="description" content="Altin Ademi — Architectural Designer. Architecture, Freelance &amp; Creative Portfolio." />
+
+  <!-- Fonts: Unbounded (display) + Syne (body) + Fira Code (mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;700;900&family=Syne:wght@300;400;500;600&family=Fira+Code:wght@300;400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ CURSOR ═══ -->
+  <div id="cursor" class="cursor" aria-hidden="true">
+    <div class="cursor-inner"></div>
+  </div>
+
+  <!-- ═══ GRAIN TEXTURE ═══ -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       VIEW: LANDING
+       ═══════════════════════════════════════════ -->
+  <section id="view-landing" class="view active" aria-label="Landing">
+
+    <!-- Architectural SVG background -->
+    <div class="land-bg" aria-hidden="true">
+      <svg class="arch-bg-svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="bRad" cx="52%" cy="48%">
+            <stop offset="0%"   stop-color="#141414"/>
+            <stop offset="100%" stop-color="#000000"/>
+          </radialGradient>
+          <linearGradient id="lH" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="transparent"/>
+            <stop offset="45%"  stop-color="rgba(238,232,220,.16)"/>
+            <stop offset="55%"  stop-color="rgba(238,232,220,.16)"/>
+            <stop offset="100%" stop-color="transparent"/>
+          </linearGradient>
+        </defs>
+        <rect width="1600" height="900" fill="url(#bRad)"/>
+
+        <!-- Perspective floor grid -->
+        <g opacity=".55">
+          <line x1="800" y1="510" x2="0"    y2="900" stroke="rgba(238,232,220,.05)" stroke-width=".9"/>
+          <line x1="800" y1="510" x2="180"  y2="900" stroke="rgba(238,232,220,.045)" stroke-width=".8"/>
+          <line x1="800" y1="510" x2="360"  y2="900" stroke="rgba(238,232,220,.04)"  stroke-width=".7"/>
+          <line x1="800" y1="510" x2="540"  y2="900" stroke="rgba(238,232,220,.04)"  stroke-width=".7"/>
+          <line x1="800" y1="510" x2="680"  y2="900" stroke="rgba(238,232,220,.04)"  stroke-width=".7"/>
+          <line x1="800" y1="510" x2="800"  y2="900" stroke="rgba(238,232,220,.035)" stroke-width=".7"/>
+          <line x1="800" y1="510" x2="920"  y2="900" stroke="rgba(238,232,220,.04)"  stroke-width=".7"/>
+          <line x1="800" y1="510" x2="1060" y2="900" stroke="rgba(238,232,220,.04)"  stroke-width=".7"/>
+          <line x1="800" y1="510" x2="1240" y2="900" stroke="rgba(238,232,220,.045)" stroke-width=".8"/>
+          <line x1="800" y1="510" x2="1420" y2="900" stroke="rgba(238,232,220,.045)" stroke-width=".8"/>
+          <line x1="800" y1="510" x2="1600" y2="900" stroke="rgba(238,232,220,.05)" stroke-width=".9"/>
+          <line x1="0" y1="640" x2="1600" y2="640" stroke="rgba(238,232,220,.03)" stroke-width=".5"/>
+          <line x1="0" y1="730" x2="1600" y2="730" stroke="rgba(238,232,220,.025)" stroke-width=".4"/>
+          <line x1="0" y1="820" x2="1600" y2="820" stroke="rgba(238,232,220,.02)"  stroke-width=".4"/>
+        </g>
+
+        <!-- Horizon line -->
+        <line x1="0" y1="510" x2="1600" y2="510" stroke="url(#lH)" stroke-width=".9"/>
+
+        <!-- LEFT TOWER — curtain wall -->
+        <g>
+          <rect x="60" y="80" width="250" height="730" fill="rgba(238,232,220,.01)" stroke="rgba(238,232,220,.1)" stroke-width=".8"/>
+          <!-- Verticals -->
+          <line x1="110" y1="80" x2="110" y2="810" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+          <line x1="160" y1="80" x2="160" y2="810" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+          <line x1="210" y1="80" x2="210" y2="810" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+          <line x1="260" y1="80" x2="260" y2="810" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+          <!-- Horizontals -->
+          <line x1="60" y1="140" x2="310" y2="140" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="60" y1="200" x2="310" y2="200" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="60" y1="260" x2="310" y2="260" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="60" y1="320" x2="310" y2="320" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="60" y1="380" x2="310" y2="380" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="60" y1="440" x2="310" y2="440" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="60" y1="500" x2="310" y2="500" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="60" y1="560" x2="310" y2="560" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="60" y1="620" x2="310" y2="620" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="60" y1="680" x2="310" y2="680" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="60" y1="740" x2="310" y2="740" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <!-- Lit windows -->
+          <rect x="72"  y="105" width="22" height="28" rx="1" fill="rgba(255,250,225,.07)"/>
+          <rect x="124" y="165" width="22" height="28" rx="1" fill="rgba(255,250,225,.09)"/>
+          <rect x="174" y="225" width="22" height="28" rx="1" fill="rgba(255,250,225,.06)"/>
+          <rect x="222" y="285" width="22" height="28" rx="1" fill="rgba(255,250,225,.08)"/>
+          <rect x="270" y="345" width="22" height="28" rx="1" fill="rgba(255,250,225,.07)"/>
+          <rect x="72"  y="405" width="22" height="28" rx="1" fill="rgba(255,250,225,.05)"/>
+          <rect x="174" y="465" width="22" height="28" rx="1" fill="rgba(255,250,225,.08)"/>
+          <rect x="222" y="585" width="22" height="28" rx="1" fill="rgba(255,250,225,.06)"/>
+          <rect x="124" y="645" width="22" height="28" rx="1" fill="rgba(255,250,225,.07)"/>
+        </g>
+
+        <!-- CENTER BLOCK — administrative / wide -->
+        <g>
+          <rect x="390" y="400" width="480" height="410" fill="rgba(238,232,220,.008)" stroke="rgba(238,232,220,.07)" stroke-width=".7"/>
+          <line x1="370" y1="400" x2="890" y2="400" stroke="rgba(238,232,220,.12)" stroke-width="1.1"/>
+          <rect x="390" y="400" width="480" height="10" fill="rgba(80,140,80,.06)"/>
+          <!-- Structural bays -->
+          <line x1="470" y1="400" x2="470" y2="810" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="550" y1="400" x2="550" y2="810" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="630" y1="400" x2="630" y2="810" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="710" y1="400" x2="710" y2="810" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="790" y1="400" x2="790" y2="810" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="390" y1="460" x2="870" y2="460" stroke="rgba(238,232,220,.035)" stroke-width=".4"/>
+          <line x1="390" y1="520" x2="870" y2="520" stroke="rgba(238,232,220,.035)" stroke-width=".4"/>
+          <line x1="390" y1="580" x2="870" y2="580" stroke="rgba(238,232,220,.035)" stroke-width=".4"/>
+          <line x1="390" y1="640" x2="870" y2="640" stroke="rgba(238,232,220,.035)" stroke-width=".4"/>
+          <line x1="390" y1="700" x2="870" y2="700" stroke="rgba(238,232,220,.035)" stroke-width=".4"/>
+          <line x1="390" y1="760" x2="870" y2="760" stroke="rgba(238,232,220,.035)" stroke-width=".4"/>
+        </g>
+
+        <!-- RIGHT TOWER — tapered -->
+        <g>
+          <polygon points="1110,810 1400,810 1360,50 1150,50" fill="rgba(238,232,220,.01)" stroke="rgba(238,232,220,.09)" stroke-width=".8"/>
+          <line x1="1168" y1="50" x2="1140" y2="810" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+          <line x1="1220" y1="50" x2="1200" y2="810" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+          <line x1="1274" y1="50" x2="1264" y2="810" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+          <line x1="1328" y1="50" x2="1328" y2="810" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+          <line x1="1148" y1="150" x2="1372" y2="150" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="1146" y1="250" x2="1372" y2="250" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="1144" y1="350" x2="1372" y2="350" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="1142" y1="450" x2="1374" y2="450" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="1140" y1="550" x2="1376" y2="550" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="1138" y1="650" x2="1378" y2="650" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <line x1="1136" y1="750" x2="1380" y2="750" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+          <!-- Windows -->
+          <rect x="1155" y="80"  width="20" height="28" rx="1" fill="rgba(255,250,225,.07)"/>
+          <rect x="1204" y="180" width="20" height="28" rx="1" fill="rgba(255,250,225,.09)"/>
+          <rect x="1254" y="280" width="20" height="28" rx="1" fill="rgba(255,250,225,.06)"/>
+          <rect x="1304" y="380" width="20" height="28" rx="1" fill="rgba(255,250,225,.08)"/>
+          <rect x="1155" y="480" width="20" height="28" rx="1" fill="rgba(255,250,225,.05)"/>
+          <rect x="1350" y="580" width="18" height="28" rx="1" fill="rgba(255,250,225,.07)"/>
+          <rect x="1204" y="680" width="20" height="28" rx="1" fill="rgba(255,250,225,.06)"/>
+        </g>
+
+        <!-- Section circles -->
+        <circle cx="800" cy="900" r="660" fill="none" stroke="rgba(238,232,220,.02)"  stroke-width=".7"/>
+        <circle cx="800" cy="900" r="460" fill="none" stroke="rgba(238,232,220,.018)" stroke-width=".5"/>
+        <circle cx="1560" cy="0" r="340"  fill="none" stroke="rgba(238,232,220,.018)" stroke-width=".5"/>
+        <circle cx="40"   cy="0" r="260"  fill="none" stroke="rgba(238,232,220,.015)" stroke-width=".4"/>
+
+        <!-- Ground plane -->
+        <rect x="0" y="810" width="1600" height="90" fill="rgba(0,0,0,.5)"/>
+      </svg>
+
+      <!-- Overlay stack -->
+      <div class="bg-ov bg-ov-bot"></div>
+      <div class="bg-ov bg-ov-top"></div>
+      <div class="bg-vignette"></div>
+    </div>
+
+    <!-- Floating shapes -->
+    <div class="float-shapes" aria-hidden="true">
+      <div class="fs fs-1"></div>
+      <div class="fs fs-2"></div>
+      <div class="fs fs-3"></div>
+      <div class="fs fs-4"></div>
+      <div class="fs fs-5"></div>
+    </div>
+
+    <!-- ── AAA Logo ── -->
+    <a href="#" class="land-logo" id="land-logo" aria-label="Altin Ademi Architecture">
+      <svg class="aaa-svg" viewBox="0 0 96 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- A1: Left — solid pointed tower -->
+        <polygon points="3,62 16,6 24,6 24,62"
+          fill="none" stroke="white" stroke-width="1.3" stroke-linejoin="round"/>
+        <line x1="3"  y1="62" x2="24"  y2="62" stroke="white" stroke-width="1.3"/>
+        <line x1="7"  y1="43" x2="20"  y2="43" stroke="white" stroke-width=".85"/>
+        <!-- A2: Center — taller, bolder -->
+        <polygon points="29,62 42,2 55,62"
+          fill="none" stroke="white" stroke-width="1.3" stroke-linejoin="round"/>
+        <line x1="33" y1="40" x2="51"  y2="40" stroke="white" stroke-width=".85"/>
+        <!-- A3: Right — tapered tower -->
+        <polygon points="60,62 70,6 82,62"
+          fill="none" stroke="white" stroke-width="1.3" stroke-linejoin="round"/>
+        <line x1="60" y1="62" x2="82"  y2="62" stroke="white" stroke-width="1.3"/>
+        <line x1="63" y1="43" x2="77"  y2="43" stroke="white" stroke-width=".85"/>
+        <!-- Shared baseline -->
+        <line x1="3"  y1="62" x2="93"  y2="62" stroke="rgba(255,255,255,.28)" stroke-width=".55"/>
+      </svg>
+    </a>
+
+    <!-- ── Language switcher ── -->
+    <div class="land-lang" id="land-lang">
+      <button class="ll-btn active" data-lang="en">EN</button>
+      <span class="ll-sep">·</span>
+      <button class="ll-btn" data-lang="sq">AL</button>
+      <span class="ll-sep">·</span>
+      <button class="ll-btn" data-lang="mk">MK</button>
+    </div>
+
+    <!-- ── Center content ── -->
+    <div class="land-content">
+      <div class="land-eyebrow">
+        <span class="le-line"></span>
+        <span class="le-text" data-i18n="land_eyebrow">Architectural Designer</span>
+        <span class="le-line"></span>
+      </div>
+
+      <h1 class="land-name">
+        <span class="ln-a" data-i18n="land_name_a">ALTIN</span>
+        <span class="ln-b" data-i18n="land_name_b">ADEMI</span>
+      </h1>
+
+      <p class="land-disc" data-i18n="land_disc">Architecture</p>
+
+      <div class="land-rule"></div>
+
+      <button class="land-btn" id="land-btn">
+        <span class="lb-text" data-i18n="land_cta">Explore My Portfolio</span>
+        <span class="lb-glow"></span>
+        <svg class="lb-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+          <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.4"
+            fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- ── Bottom strip ── -->
+    <div class="land-foot">
+      <span data-i18n="land_location">Skopje, North Macedonia</span>
+      <span class="lf-dot">·</span>
+      <span>2025</span>
+    </div>
+
+  </section><!-- /view-landing -->
+
+  <!-- ═══════════════════════════════════════════
+       VIEW: HUB  (portfolio navigation)
+       ═══════════════════════════════════════════ -->
+  <section id="view-hub" class="view" aria-label="Portfolio Hub">
+
+    <!-- Header -->
+    <header class="hub-hdr" id="hub-hdr">
+      <button class="hdr-logo" data-goto="hub" aria-label="Home">
+        <svg class="aaa-svg-sm" viewBox="0 0 96 66" fill="none">
+          <polygon points="3,62 16,6 24,6 24,62" fill="none" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+          <line x1="3" y1="62" x2="24" y2="62" stroke="white" stroke-width="1.4"/>
+          <line x1="7" y1="43" x2="20" y2="43" stroke="white" stroke-width=".9"/>
+          <polygon points="29,62 42,2 55,62" fill="none" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+          <line x1="33" y1="40" x2="51" y2="40" stroke="white" stroke-width=".9"/>
+          <polygon points="60,62 70,6 82,62" fill="none" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+          <line x1="60" y1="62" x2="82" y2="62" stroke="white" stroke-width="1.4"/>
+          <line x1="63" y1="43" x2="77" y2="43" stroke="white" stroke-width=".9"/>
+          <line x1="3" y1="62" x2="93" y2="62" stroke="rgba(255,255,255,.25)" stroke-width=".5"/>
+        </svg>
+      </button>
+
+      <nav class="hdr-nav" aria-label="Portfolio navigation">
+        <button class="hn-lnk" data-goto="architecture" data-i18n="nav_arch">Architecture</button>
+        <button class="hn-lnk" data-goto="freelance"    data-i18n="nav_free">Freelance</button>
+        <button class="hn-lnk" data-goto="creative"     data-i18n="nav_creat">Creative</button>
+        <button class="hn-lnk" data-goto="skills"       data-i18n="nav_skills">Skills</button>
+        <button class="hn-lnk" data-goto="cv"           data-i18n="nav_cv">CV</button>
+        <button class="hn-lnk" data-goto="contact"      data-i18n="nav_contact">Contact</button>
+      </nav>
+
+      <div class="hdr-right">
+        <div class="lang-sw" id="hub-lang">
+          <button class="ll-btn active" data-lang="en">EN</button>
+          <span class="ll-sep">·</span>
+          <button class="ll-btn" data-lang="sq">AL</button>
+          <span class="ll-sep">·</span>
+          <button class="ll-btn" data-lang="mk">MK</button>
+        </div>
+        <button class="burger-btn" id="burger-btn" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mob-menu" id="mob-menu" aria-hidden="true">
+      <nav>
+        <button data-goto="architecture" data-i18n="nav_arch">Architecture</button>
+        <button data-goto="freelance"    data-i18n="nav_free">Freelance</button>
+        <button data-goto="creative"     data-i18n="nav_creat">Creative</button>
+        <button data-goto="skills"       data-i18n="nav_skills">Skills</button>
+        <button data-goto="cv"           data-i18n="nav_cv">CV</button>
+        <button data-goto="contact"      data-i18n="nav_contact">Contact</button>
+      </nav>
+      <div class="mm-lang">
+        <button class="ll-btn active" data-lang="en">EN</button>
+        <button class="ll-btn" data-lang="sq">AL</button>
+        <button class="ll-btn" data-lang="mk">MK</button>
+      </div>
+    </div>
+
+    <!-- Hub intro -->
+    <div class="hub-intro">
+      <div class="hub-bg-geo" aria-hidden="true">
+        <div class="hbg-ring r1"></div>
+        <div class="hbg-ring r2"></div>
+        <div class="hbg-line l1"></div>
+        <div class="hbg-line l2"></div>
+      </div>
+      <p class="hub-eyebrow reveal" data-i18n="hub_eyebrow">Selected Disciplines</p>
+      <h2 class="hub-name reveal">Altin Ademi</h2>
+      <p  class="hub-role reveal" data-i18n="hub_role">Architecture · Freelance · Creative</p>
+    </div>
+
+    <!-- 6 Navigation Cards -->
+    <div class="hub-cards-outer">
+      <div class="hub-cards">
+
+        <button class="hc reveal" data-goto="architecture" style="--ci:0">
+          <div class="hc-bg hcbg-arch"></div>
+          <div class="hc-veil"></div>
+          <div class="hc-shimmer"></div>
+          <div class="hc-body">
+            <span class="hc-num">01</span>
+            <h3 class="hc-title" data-i18n="nav_arch">Architecture</h3>
+            <p   class="hc-sub"  data-i18n="hc_arch">Featured Projects</p>
+            <span class="hc-arr">↗</span>
+          </div>
+          <div class="hc-bar"></div>
+        </button>
+
+        <button class="hc reveal" data-goto="freelance" style="--ci:1">
+          <div class="hc-bg hcbg-free"></div>
+          <div class="hc-veil"></div>
+          <div class="hc-shimmer"></div>
+          <div class="hc-body">
+            <span class="hc-num">02</span>
+            <h3 class="hc-title" data-i18n="nav_free">Freelance</h3>
+            <p   class="hc-sub"  data-i18n="hc_free">Client Work</p>
+            <span class="hc-arr">↗</span>
+          </div>
+          <div class="hc-bar"></div>
+        </button>
+
+        <button class="hc reveal" data-goto="creative" style="--ci:2">
+          <div class="hc-bg hcbg-creat"></div>
+          <div class="hc-veil"></div>
+          <div class="hc-shimmer"></div>
+          <div class="hc-body">
+            <span class="hc-num">03</span>
+            <h3 class="hc-title" data-i18n="nav_creat">Creative</h3>
+            <p   class="hc-sub"  data-i18n="hc_creat">Craft &amp; Experiments</p>
+            <span class="hc-arr">↗</span>
+          </div>
+          <div class="hc-bar"></div>
+        </button>
+
+        <button class="hc reveal" data-goto="skills" style="--ci:3">
+          <div class="hc-bg hcbg-skills"></div>
+          <div class="hc-veil"></div>
+          <div class="hc-shimmer"></div>
+          <div class="hc-body">
+            <span class="hc-num">04</span>
+            <h3 class="hc-title" data-i18n="nav_skills">Skills</h3>
+            <p   class="hc-sub"  data-i18n="hc_skills">Software &amp; Expertise</p>
+            <span class="hc-arr">↗</span>
+          </div>
+          <div class="hc-bar"></div>
+        </button>
+
+        <button class="hc reveal" data-goto="cv" style="--ci:4">
+          <div class="hc-bg hcbg-cv"></div>
+          <div class="hc-veil"></div>
+          <div class="hc-shimmer"></div>
+          <div class="hc-body">
+            <span class="hc-num">05</span>
+            <h3 class="hc-title" data-i18n="nav_cv">CV</h3>
+            <p   class="hc-sub"  data-i18n="hc_cv">Background &amp; Education</p>
+            <span class="hc-arr">↗</span>
+          </div>
+          <div class="hc-bar"></div>
+        </button>
+
+        <button class="hc reveal" data-goto="contact" style="--ci:5">
+          <div class="hc-bg hcbg-contact"></div>
+          <div class="hc-veil"></div>
+          <div class="hc-shimmer"></div>
+          <div class="hc-body">
+            <span class="hc-num">06</span>
+            <h3 class="hc-title" data-i18n="nav_contact">Contact</h3>
+            <p   class="hc-sub"  data-i18n="hc_contact">Start a Conversation</p>
+            <span class="hc-arr">↗</span>
+          </div>
+          <div class="hc-bar"></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="hub-footer">
+      <span>Altin Ademi</span>
+      <span data-i18n="land_disc">Architecture</span>
+      <span>2025</span>
+      <span data-i18n="land_location">Skopje, MK</span>
+    </div>
+
+  </section><!-- /view-hub -->
+
+  <!-- ═══════════════════════════════════════════
+       VIEW: ARCHITECTURE
+       ═══════════════════════════════════════════ -->
+  <section id="view-architecture" class="view sub-view" aria-label="Architecture Projects">
+    <header class="sub-hdr">
+      <button class="sub-back" data-goto="hub" aria-label="Back">
+        <svg width="22" height="13" viewBox="0 0 22 13"><path d="M8 1L2 6.5l6 5.5M2 6.5h18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      </button>
+      <button class="sub-logo-btn" data-goto="hub">
+        <svg class="aaa-svg-xs" viewBox="0 0 96 66" fill="none"><polygon points="3,62 16,6 24,6 24,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="3" y1="62" x2="24" y2="62" stroke="white" stroke-width="1.5"/><line x1="7" y1="43" x2="20" y2="43" stroke="white" stroke-width=".9"/><polygon points="29,62 42,2 55,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="33" y1="40" x2="51" y2="40" stroke="white" stroke-width=".9"/><polygon points="60,62 70,6 82,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="60" y1="62" x2="82" y2="62" stroke="white" stroke-width="1.5"/><line x1="63" y1="43" x2="77" y2="43" stroke="white" stroke-width=".9"/></svg>
+      </button>
+      <div class="sub-lang">
+        <button class="ll-btn active" data-lang="en">EN</button><span class="ll-sep">·</span>
+        <button class="ll-btn" data-lang="sq">AL</button><span class="ll-sep">·</span>
+        <button class="ll-btn" data-lang="mk">MK</button>
+      </div>
+    </header>
+
+    <div class="sub-mast">
+      <div class="sm-rings" aria-hidden="true"><div class="smr smr1"></div><div class="smr smr2"></div></div>
+      <p class="sm-kicker reveal" data-i18n="arch_kicker">— Selected Projects</p>
+      <h1 class="sm-title reveal" data-i18n="nav_arch">Architecture</h1>
+      <p class="sm-desc reveal" data-i18n="arch_desc">Built and conceptual projects exploring form, structure, and materiality.</p>
+    </div>
+
+    <div class="proj-list">
+      <article class="pr reveal" data-proj="tower">
+        <div class="pr-vis">
+          <div class="pr-img pr-img-t">
+            <div class="pr-art">
+              <svg viewBox="0 0 200 300" fill="none" class="pra-svg">
+                <rect x="65" y="15" width="70" height="270" fill="rgba(238,232,220,.018)" stroke="rgba(238,232,220,.1)" stroke-width=".8"/>
+                <line x1="65" y1="15" x2="135" y2="15" stroke="rgba(238,232,220,.13)" stroke-width=".8"/>
+                <line x1="83" y1="15" x2="83" y2="285" stroke="rgba(238,232,220,.055)" stroke-width=".4"/>
+                <line x1="100" y1="15" x2="100" y2="285" stroke="rgba(238,232,220,.055)" stroke-width=".4"/>
+                <line x1="117" y1="15" x2="117" y2="285" stroke="rgba(238,232,220,.055)" stroke-width=".4"/>
+                <line x1="65" y1="75"  x2="135" y2="75"  stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <line x1="65" y1="130" x2="135" y2="130" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <line x1="65" y1="185" x2="135" y2="185" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <line x1="65" y1="240" x2="135" y2="240" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <rect x="71"  y="35"  width="10" height="18" rx="1" fill="rgba(255,250,225,.08)"/>
+                <rect x="88"  y="90"  width="10" height="18" rx="1" fill="rgba(255,250,225,.1)"/>
+                <rect x="105" y="145" width="10" height="18" rx="1" fill="rgba(255,250,225,.07)"/>
+                <rect x="119" y="50"  width="10" height="18" rx="1" fill="rgba(255,250,225,.08)"/>
+                <rect x="71"  y="200" width="10" height="18" rx="1" fill="rgba(255,250,225,.06)"/>
+              </svg>
+            </div>
+            <div class="pr-dim"></div>
+            <span class="pr-badge">01 / 03</span>
+          </div>
+        </div>
+        <div class="pr-info">
+          <div class="pr-meta"><span class="pr-yr">2024</span><span class="pr-dash">—</span><span class="pr-cat" data-i18n="p_cat_concept">Concept Design</span></div>
+          <h2 class="pr-name" data-i18n="p1_name">Architectural Tower</h2>
+          <p   class="pr-desc" data-i18n="p1_desc">Mixed-use high-rise exploring vertical urbanism and structural expression through a tapering glass-and-steel facade across 42 floors of residential, office, and retail programme.</p>
+          <div class="pr-tags"><span>High-Rise</span><span>Mixed-Use</span><span>Concept</span></div>
+          <button class="pr-open-btn" data-proj="tower" data-i18n="view_proj">View Project →</button>
+        </div>
+      </article>
+
+      <article class="pr pr-rev reveal" data-proj="admin">
+        <div class="pr-vis">
+          <div class="pr-img pr-img-a">
+            <div class="pr-art">
+              <svg viewBox="0 0 280 190" fill="none" class="pra-svg">
+                <rect x="20" y="65" width="240" height="115" fill="rgba(238,232,220,.015)" stroke="rgba(238,232,220,.09)" stroke-width=".7"/>
+                <line x1="10" y1="65" x2="270" y2="65" stroke="rgba(238,232,220,.13)" stroke-width="1"/>
+                <rect x="20" y="65" width="240" height="10" fill="rgba(80,150,80,.07)"/>
+                <line x1="68"  y1="65" x2="68"  y2="180" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <line x1="116" y1="65" x2="116" y2="180" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <line x1="164" y1="65" x2="164" y2="180" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <line x1="212" y1="65" x2="212" y2="180" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <line x1="20" y1="107" x2="260" y2="107" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+                <line x1="20" y1="144" x2="260" y2="144" stroke="rgba(238,232,220,.04)" stroke-width=".4"/>
+                <rect x="28" y="82"  width="30" height="18" rx="1" fill="rgba(255,250,225,.07)"/>
+                <rect x="122" y="82" width="30" height="18" rx="1" fill="rgba(255,250,225,.09)"/>
+                <rect x="218" y="82" width="30" height="18" rx="1" fill="rgba(255,250,225,.07)"/>
+                <rect x="74" y="118" width="24" height="18" rx="1" fill="rgba(255,250,225,.05)"/>
+              </svg>
+            </div>
+            <div class="pr-dim pr-dim-r"></div>
+            <span class="pr-badge">02 / 03</span>
+          </div>
+        </div>
+        <div class="pr-info">
+          <div class="pr-meta"><span class="pr-yr">2023</span><span class="pr-dash">—</span><span class="pr-cat" data-i18n="p_cat_sustain">Sustainable Design</span></div>
+          <h2 class="pr-name" data-i18n="p2_name">Administrative Building</h2>
+          <p   class="pr-desc" data-i18n="p2_desc">Administrative complex with living green roof system, biophilic design principles, and near-zero energy performance through triple-glazed facades and passive solar strategy.</p>
+          <div class="pr-tags"><span>Green Roof</span><span>Biophilic</span><span>Public</span></div>
+          <button class="pr-open-btn" data-proj="admin" data-i18n="view_proj">View Project →</button>
+        </div>
+      </article>
+
+      <article class="pr reveal" data-proj="house">
+        <div class="pr-vis">
+          <div class="pr-img pr-img-h">
+            <div class="pr-art">
+              <svg viewBox="0 0 260 210" fill="none" class="pra-svg">
+                <polygon points="24,210 24,90 130,22 236,90 236,210" fill="rgba(238,232,220,.015)" stroke="rgba(238,232,220,.09)" stroke-width=".7"/>
+                <line x1="24" y1="90" x2="236" y2="90" stroke="rgba(238,232,220,.11)" stroke-width=".8"/>
+                <line x1="24" y1="140" x2="236" y2="140" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <line x1="24" y1="175" x2="236" y2="175" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <line x1="86"  y1="90" x2="86"  y2="210" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <line x1="174" y1="90" x2="174" y2="210" stroke="rgba(238,232,220,.05)" stroke-width=".4"/>
+                <rect x="88"  y="150" width="84" height="60" fill="rgba(238,232,220,.025)" stroke="rgba(238,232,220,.07)" stroke-width=".5"/>
+                <rect x="44"  y="102" width="26" height="22" rx="1" fill="rgba(255,250,225,.07)"/>
+                <rect x="178" y="102" width="26" height="22" rx="1" fill="rgba(255,250,225,.07)"/>
+                <rect x="110" y="102" width="26" height="22" rx="1" fill="rgba(255,250,225,.09)"/>
+              </svg>
+            </div>
+            <div class="pr-dim"></div>
+            <span class="pr-badge">03 / 03</span>
+          </div>
+        </div>
+        <div class="pr-info">
+          <div class="pr-meta"><span class="pr-yr">2023</span><span class="pr-dash">—</span><span class="pr-cat" data-i18n="p_cat_res">Residential</span></div>
+          <h2 class="pr-name" data-i18n="p3_name">Full House Design</h2>
+          <p   class="pr-desc" data-i18n="p3_desc">Complete interior and exterior residential design — site survey through bespoke joinery detail and material specification to final photorealistic 3D renders.</p>
+          <div class="pr-tags"><span>Interior</span><span>Exterior</span><span>Residential</span></div>
+          <button class="pr-open-btn" data-proj="house" data-i18n="view_proj">View Project →</button>
+        </div>
+      </article>
+    </div>
+
+    <!-- Project modal -->
+    <div class="proj-modal" id="proj-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="pm-wrap">
+        <button class="pm-close" id="pm-close" aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 20 20"><path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div id="pm-body"></div>
+      </div>
+    </div>
+  </section><!-- /view-architecture -->
+
+  <!-- ═══════════════════════════════════════════
+       VIEW: FREELANCE
+       ═══════════════════════════════════════════ -->
+  <section id="view-freelance" class="view sub-view" aria-label="Freelance Work">
+    <header class="sub-hdr">
+      <button class="sub-back" data-goto="hub"><svg width="22" height="13" viewBox="0 0 22 13"><path d="M8 1L2 6.5l6 5.5M2 6.5h18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+      <button class="sub-logo-btn" data-goto="hub"><svg class="aaa-svg-xs" viewBox="0 0 96 66" fill="none"><polygon points="3,62 16,6 24,6 24,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="3" y1="62" x2="24" y2="62" stroke="white" stroke-width="1.5"/><line x1="7" y1="43" x2="20" y2="43" stroke="white" stroke-width=".9"/><polygon points="29,62 42,2 55,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="33" y1="40" x2="51" y2="40" stroke="white" stroke-width=".9"/><polygon points="60,62 70,6 82,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="60" y1="62" x2="82" y2="62" stroke="white" stroke-width="1.5"/><line x1="63" y1="43" x2="77" y2="43" stroke="white" stroke-width=".9"/></svg></button>
+      <div class="sub-lang"><button class="ll-btn active" data-lang="en">EN</button><span class="ll-sep">·</span><button class="ll-btn" data-lang="sq">AL</button><span class="ll-sep">·</span><button class="ll-btn" data-lang="mk">MK</button></div>
+    </header>
+    <div class="sub-mast">
+      <div class="sm-rings" aria-hidden="true"><div class="smr smr1"></div><div class="smr smr2"></div></div>
+      <p class="sm-kicker reveal" data-i18n="free_kicker">— Client Commissions</p>
+      <h1 class="sm-title reveal" data-i18n="nav_free">Freelance</h1>
+      <p class="sm-desc reveal" data-i18n="free_desc">Residential and commercial projects for private clients across North Macedonia.</p>
+    </div>
+    <div class="free-grid-wrap">
+      <div class="free-grid">
+        <div class="fg-card reveal" style="--fi:0"><div class="fg-img fg-img-1"><div class="fg-tag" data-i18n="p_cat_res">Residential</div></div><div class="fg-body"><div class="fg-meta"><span>2024</span><span class="fg-dot">·</span><span>Skopje</span></div><h3 data-i18n="f1_name">Modern Family Home</h3><p data-i18n="f1_desc">Open-plan contemporary residence with floor-to-ceiling glazing and integrated landscape design.</p></div></div>
+        <div class="fg-card reveal" style="--fi:1"><div class="fg-img fg-img-2"><div class="fg-tag" data-i18n="p_cat_res">Residential</div></div><div class="fg-body"><div class="fg-meta"><span>2024</span><span class="fg-dot">·</span><span>Tetovo</span></div><h3 data-i18n="f2_name">Minimalist Villa</h3><p data-i18n="f2_desc">Flat-roofed villa with dark cladding, cantilevered volumes, and a courtyard pool at its centre.</p></div></div>
+        <div class="fg-card reveal" style="--fi:2"><div class="fg-img fg-img-3"><div class="fg-tag" data-i18n="p_cat_res">Residential</div></div><div class="fg-body"><div class="fg-meta"><span>2023</span><span class="fg-dot">·</span><span>Ohrid</span></div><h3 data-i18n="f3_name">Hillside Residence</h3><p data-i18n="f3_desc">Terraced hillside home following the natural topography with panoramic lake views.</p></div></div>
+        <div class="fg-card reveal" style="--fi:3"><div class="fg-img fg-img-4"><div class="fg-tag" data-i18n="p_cat_res">Residential</div></div><div class="fg-body"><div class="fg-meta"><span>2023</span><span class="fg-dot">·</span><span>Skopje</span></div><h3 data-i18n="f4_name">Urban Compact House</h3><p data-i18n="f4_desc">Space-efficient urban infill with smart layouts, light wells, and a rooftop terrace garden.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       VIEW: CREATIVE
+       ═══════════════════════════════════════════ -->
+  <section id="view-creative" class="view sub-view" aria-label="Creative Work">
+    <header class="sub-hdr">
+      <button class="sub-back" data-goto="hub"><svg width="22" height="13" viewBox="0 0 22 13"><path d="M8 1L2 6.5l6 5.5M2 6.5h18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+      <button class="sub-logo-btn" data-goto="hub"><svg class="aaa-svg-xs" viewBox="0 0 96 66" fill="none"><polygon points="3,62 16,6 24,6 24,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="3" y1="62" x2="24" y2="62" stroke="white" stroke-width="1.5"/><line x1="7" y1="43" x2="20" y2="43" stroke="white" stroke-width=".9"/><polygon points="29,62 42,2 55,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="33" y1="40" x2="51" y2="40" stroke="white" stroke-width=".9"/><polygon points="60,62 70,6 82,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="60" y1="62" x2="82" y2="62" stroke="white" stroke-width="1.5"/><line x1="63" y1="43" x2="77" y2="43" stroke="white" stroke-width=".9"/></svg></button>
+      <div class="sub-lang"><button class="ll-btn active" data-lang="en">EN</button><span class="ll-sep">·</span><button class="ll-btn" data-lang="sq">AL</button><span class="ll-sep">·</span><button class="ll-btn" data-lang="mk">MK</button></div>
+    </header>
+    <div class="sub-mast">
+      <div class="sm-rings" aria-hidden="true"><div class="smr smr1"></div><div class="smr smr2"></div></div>
+      <p class="sm-kicker reveal" data-i18n="creat_kicker">— Experiments</p>
+      <h1 class="sm-title reveal" data-i18n="nav_creat">Creative</h1>
+      <p class="sm-desc reveal" data-i18n="creat_desc">Handcraft, drawing, and material exploration beyond the digital screen.</p>
+    </div>
+    <div class="creat-wrap">
+      <div class="cc reveal"><div class="cc-hd"><span class="cc-n">01</span><h2 data-i18n="c_cat1">Origami &amp; Paper</h2></div><div class="cc-grid"><div class="cct"><div class="cct-img cct-o1"></div><p data-i18n="c1_1">Structure #1</p></div><div class="cct"><div class="cct-img cct-o2"></div><p data-i18n="c1_2">Paper Model</p></div><div class="cct"><div class="cct-img cct-o3"></div><p data-i18n="c1_3">Folded Form</p></div></div></div>
+      <div class="cc reveal"><div class="cc-hd"><span class="cc-n">02</span><h2 data-i18n="c_cat2">Cardboard Models</h2></div><div class="cc-grid"><div class="cct"><div class="cct-img cct-c1"></div><p data-i18n="c2_1">Urban Block</p></div><div class="cct"><div class="cct-img cct-c2"></div><p data-i18n="c2_2">Fragment</p></div></div></div>
+      <div class="cc reveal"><div class="cc-hd"><span class="cc-n">03</span><h2 data-i18n="c_cat3">Wood Projects</h2></div><div class="cc-grid"><div class="cct"><div class="cct-img cct-w1"></div><p data-i18n="c3_1">Joinery Study</p></div><div class="cct"><div class="cct-img cct-w2"></div><p data-i18n="c3_2">Sculptural Form</p></div></div></div>
+      <div class="cc reveal"><div class="cc-hd"><span class="cc-n">04</span><h2 data-i18n="c_cat4">Portraits &amp; Sketches</h2></div><div class="cc-grid"><div class="cct"><div class="cct-img cct-p1"></div><p data-i18n="c4_1">Portrait I</p></div><div class="cct"><div class="cct-img cct-p2"></div><p data-i18n="c4_2">Portrait II</p></div><div class="cct"><div class="cct-img cct-s1"></div><p data-i18n="c5_1">Car Sketch</p></div></div></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       VIEW: SKILLS
+       ═══════════════════════════════════════════ -->
+  <section id="view-skills" class="view sub-view" aria-label="Skills">
+    <header class="sub-hdr">
+      <button class="sub-back" data-goto="hub"><svg width="22" height="13" viewBox="0 0 22 13"><path d="M8 1L2 6.5l6 5.5M2 6.5h18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+      <button class="sub-logo-btn" data-goto="hub"><svg class="aaa-svg-xs" viewBox="0 0 96 66" fill="none"><polygon points="3,62 16,6 24,6 24,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="3" y1="62" x2="24" y2="62" stroke="white" stroke-width="1.5"/><line x1="7" y1="43" x2="20" y2="43" stroke="white" stroke-width=".9"/><polygon points="29,62 42,2 55,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="33" y1="40" x2="51" y2="40" stroke="white" stroke-width=".9"/><polygon points="60,62 70,6 82,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="60" y1="62" x2="82" y2="62" stroke="white" stroke-width="1.5"/><line x1="63" y1="43" x2="77" y2="43" stroke="white" stroke-width=".9"/></svg></button>
+      <div class="sub-lang"><button class="ll-btn active" data-lang="en">EN</button><span class="ll-sep">·</span><button class="ll-btn" data-lang="sq">AL</button><span class="ll-sep">·</span><button class="ll-btn" data-lang="mk">MK</button></div>
+    </header>
+    <div class="sub-mast">
+      <div class="sm-rings" aria-hidden="true"><div class="smr smr1"></div><div class="smr smr2"></div></div>
+      <p class="sm-kicker reveal" data-i18n="skills_kicker">— Expertise</p>
+      <h1 class="sm-title reveal" data-i18n="nav_skills">Skills</h1>
+      <p class="sm-desc reveal" data-i18n="skills_desc">A full-pipeline toolkit spanning architecture, visualization, and creative craft.</p>
+    </div>
+    <div class="skills-layout">
+      <div class="sk-left reveal" id="sk-left">
+        <h3 class="sk-subtitle" data-i18n="sk_software">Software Proficiency</h3>
+        <div class="sk-bars">
+          <div class="skb"><div class="skb-top"><span>ArchiCAD</span><span class="skb-pct">90%</span></div><div class="skb-track"><div class="skb-fill" data-w="90"></div></div></div>
+          <div class="skb"><div class="skb-top"><span>AutoCAD</span><span class="skb-pct">88%</span></div><div class="skb-track"><div class="skb-fill" data-w="88"></div></div></div>
+          <div class="skb"><div class="skb-top"><span>Revit</span><span class="skb-pct">75%</span></div><div class="skb-track"><div class="skb-fill" data-w="75"></div></div></div>
+          <div class="skb"><div class="skb-top"><span>SketchUp</span><span class="skb-pct">85%</span></div><div class="skb-track"><div class="skb-fill" data-w="85"></div></div></div>
+          <div class="skb"><div class="skb-top"><span>Photoshop</span><span class="skb-pct">80%</span></div><div class="skb-track"><div class="skb-fill" data-w="80"></div></div></div>
+          <div class="skb"><div class="skb-top"><span>Twinmotion</span><span class="skb-pct">78%</span></div><div class="skb-track"><div class="skb-fill" data-w="78"></div></div></div>
+          <div class="skb"><div class="skb-top"><span>D5 Render</span><span class="skb-pct">82%</span></div><div class="skb-track"><div class="skb-fill" data-w="82"></div></div></div>
+          <div class="skb"><div class="skb-top"><span>Blender</span><span class="skb-pct">70%</span></div><div class="skb-track"><div class="skb-fill" data-w="70"></div></div></div>
+          <div class="skb"><div class="skb-top"><span>Office Suite</span><span class="skb-pct">95%</span></div><div class="skb-track"><div class="skb-fill" data-w="95"></div></div></div>
+        </div>
+      </div>
+      <div class="sk-right reveal" style="--ri:.2s">
+        <h3 class="sk-subtitle" data-i18n="sk_arch_h">Architecture</h3>
+        <div class="sk-pills">
+          <span data-i18n="ska1">Architectural Design</span><span data-i18n="ska2">Interior Design</span><span data-i18n="ska3">Exterior Design</span><span data-i18n="ska4">3D Visualization</span><span data-i18n="ska5">Concept Development</span><span data-i18n="ska6">Space Planning</span><span data-i18n="ska7">Technical Drawing</span><span data-i18n="ska8">Site Analysis</span><span data-i18n="ska9">Material Specification</span>
+        </div>
+        <h3 class="sk-subtitle" style="margin-top:40px" data-i18n="sk_creat_h">Creative</h3>
+        <div class="sk-pills">
+          <span data-i18n="skc1">Hand Drawing</span><span data-i18n="skc2">Portrait Drawing</span><span data-i18n="skc3">Logo Design</span><span data-i18n="skc4">Website Design</span><span data-i18n="skc5">Model Making</span><span data-i18n="skc6">Wood Craft</span><span data-i18n="skc7">Paper Craft</span><span data-i18n="skc8">Car Sketching</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       VIEW: CV
+       ═══════════════════════════════════════════ -->
+  <section id="view-cv" class="view sub-view" aria-label="CV">
+    <header class="sub-hdr">
+      <button class="sub-back" data-goto="hub"><svg width="22" height="13" viewBox="0 0 22 13"><path d="M8 1L2 6.5l6 5.5M2 6.5h18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+      <button class="sub-logo-btn" data-goto="hub"><svg class="aaa-svg-xs" viewBox="0 0 96 66" fill="none"><polygon points="3,62 16,6 24,6 24,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="3" y1="62" x2="24" y2="62" stroke="white" stroke-width="1.5"/><line x1="7" y1="43" x2="20" y2="43" stroke="white" stroke-width=".9"/><polygon points="29,62 42,2 55,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="33" y1="40" x2="51" y2="40" stroke="white" stroke-width=".9"/><polygon points="60,62 70,6 82,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="60" y1="62" x2="82" y2="62" stroke="white" stroke-width="1.5"/><line x1="63" y1="43" x2="77" y2="43" stroke="white" stroke-width=".9"/></svg></button>
+      <div class="sub-lang"><button class="ll-btn active" data-lang="en">EN</button><span class="ll-sep">·</span><button class="ll-btn" data-lang="sq">AL</button><span class="ll-sep">·</span><button class="ll-btn" data-lang="mk">MK</button></div>
+    </header>
+    <div class="sub-mast">
+      <div class="sm-rings" aria-hidden="true"><div class="smr smr1"></div><div class="smr smr2"></div></div>
+      <p class="sm-kicker reveal" data-i18n="cv_kicker">— Curriculum Vitae</p>
+      <h1 class="sm-title reveal">CV</h1>
+    </div>
+    <div class="cv-layout">
+      <aside class="cv-side glass-p reveal">
+        <div class="cv-av">AA</div>
+        <div class="cv-id"><h2>Altin Ademi</h2><p data-i18n="cv_role">Architectural Designer</p></div>
+        <dl class="cv-dl"><dt>Email</dt><dd>altin@ademi.arch</dd><dt data-i18n="cv_loc_lbl">Location</dt><dd>Skopje, MK</dd></dl>
+        <div class="cv-langs-blk"><p class="cv-mini" data-i18n="cv_lang_h">Languages</p><div class="cv-lr"><span>Albanian</span><span class="cv-lv" data-i18n="cv_native">Native</span></div><div class="cv-lr"><span>Macedonian</span><span class="cv-lv" data-i18n="cv_fluent">Fluent</span></div><div class="cv-lr"><span>English</span><span class="cv-lv" data-i18n="cv_advanced">Advanced</span></div></div>
+        <a class="cv-dl-btn" href="#" download><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v8M3 7l4 4 4-4M1 12h12" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg><span data-i18n="cv_dl">Download CV</span></a>
+      </aside>
+      <div class="cv-main">
+        <div class="cv-sec glass-p reveal"><h4 data-i18n="cv_about_h">About</h4><p data-i18n="cv_about">A passionate architectural designer with strong foundations in design, visualization, and creative experimentation. Combining technical precision with artistic sensibility to deliver compelling narratives across residential, commercial, and conceptual work.</p></div>
+        <div class="cv-sec glass-p reveal" style="--ri:.1s"><h4 data-i18n="cv_edu_h">Education</h4><div class="cv-tl"><div class="cv-ti"><div class="cv-dot"></div><div><span class="cv-yr">2020 — Present</span><strong data-i18n="edu1_d">Bachelor of Architecture</strong><span data-i18n="edu1_s">Faculty of Architecture — Ss. Cyril &amp; Methodius University, Skopje</span></div></div><div class="cv-ti"><div class="cv-dot"></div><div><span class="cv-yr">2016 — 2020</span><strong data-i18n="edu2_d">High School — Sciences &amp; Mathematics</strong><span data-i18n="edu2_s">Gymnasium, Skopje</span></div></div></div></div>
+        <div class="cv-sec glass-p reveal" style="--ri:.2s"><h4 data-i18n="cv_exp_h">Experience</h4><div class="cv-tl"><div class="cv-ti"><div class="cv-dot"></div><div><span class="cv-yr">2022 — Present</span><strong data-i18n="exp1_t">Freelance Architectural Designer</strong><span data-i18n="exp1_d">Independent residential and conceptual projects for private clients across North Macedonia.</span></div></div><div class="cv-ti"><div class="cv-dot"></div><div><span class="cv-yr">2021 — 2022</span><strong data-i18n="exp2_t">Design Intern</strong><span data-i18n="exp2_d">Drafting, visualization, and model-making on multiple commercial projects.</span></div></div></div></div>
+        <div class="cv-sec glass-p reveal" style="--ri:.3s"><h4 data-i18n="cv_awards_h">Awards</h4><div class="cv-aw"><div class="cv-ai"><span class="cv-yr">2023</span><p data-i18n="aw1">Faculty Design Excellence Award — Architecture Thesis</p></div><div class="cv-ai"><span class="cv-yr">2022</span><p data-i18n="aw2">Best Conceptual Project — Annual Student Exhibition</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       VIEW: CONTACT
+       ═══════════════════════════════════════════ -->
+  <section id="view-contact" class="view sub-view" aria-label="Contact">
+    <header class="sub-hdr">
+      <button class="sub-back" data-goto="hub"><svg width="22" height="13" viewBox="0 0 22 13"><path d="M8 1L2 6.5l6 5.5M2 6.5h18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+      <button class="sub-logo-btn" data-goto="hub"><svg class="aaa-svg-xs" viewBox="0 0 96 66" fill="none"><polygon points="3,62 16,6 24,6 24,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="3" y1="62" x2="24" y2="62" stroke="white" stroke-width="1.5"/><line x1="7" y1="43" x2="20" y2="43" stroke="white" stroke-width=".9"/><polygon points="29,62 42,2 55,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="33" y1="40" x2="51" y2="40" stroke="white" stroke-width=".9"/><polygon points="60,62 70,6 82,62" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><line x1="60" y1="62" x2="82" y2="62" stroke="white" stroke-width="1.5"/><line x1="63" y1="43" x2="77" y2="43" stroke="white" stroke-width=".9"/></svg></button>
+      <div class="sub-lang"><button class="ll-btn active" data-lang="en">EN</button><span class="ll-sep">·</span><button class="ll-btn" data-lang="sq">AL</button><span class="ll-sep">·</span><button class="ll-btn" data-lang="mk">MK</button></div>
+    </header>
+    <div class="sub-mast">
+      <div class="sm-rings" aria-hidden="true"><div class="smr smr1"></div><div class="smr smr2"></div></div>
+      <p class="sm-kicker reveal" data-i18n="ct_kicker">— Say Hello</p>
+      <h1 class="sm-title reveal" data-i18n="nav_contact">Contact</h1>
+      <p class="sm-desc reveal" data-i18n="ct_desc">Open for architecture, collaboration, and creative projects.</p>
+    </div>
+    <div class="ct-layout">
+      <div class="ct-left reveal">
+        <h2 class="ct-headline" data-i18n="ct_headline">Let's build something remarkable together.</h2>
+        <div class="ct-details glass-p">
+          <div class="ct-row"><span data-i18n="ct_email_l">Email</span><a href="mailto:altin@ademi.arch">altin@ademi.arch</a></div>
+          <div class="ct-row"><span data-i18n="ct_loc_l">Location</span><span>Skopje, North Macedonia</span></div>
+          <div class="ct-row"><span data-i18n="ct_status_l">Status</span><span class="ct-green" data-i18n="ct_status_v">Available for projects</span></div>
+        </div>
+        <div class="ct-socials"><a href="#" class="ct-soc">Instagram</a><a href="#" class="ct-soc">LinkedIn</a><a href="#" class="ct-soc">Behance</a></div>
+      </div>
+      <div class="ct-right reveal" style="--ri:.2s">
+        <form class="ct-form glass-p" id="ct-form" novalidate>
+          <div class="cf-f"><label data-i18n="cf_name">Name</label><input type="text" class="cf-in" required/><div class="cf-bar"></div></div>
+          <div class="cf-f"><label data-i18n="cf_email">Email</label><input type="email" class="cf-in" required/><div class="cf-bar"></div></div>
+          <div class="cf-f"><label data-i18n="cf_subj">Subject</label><input type="text" class="cf-in"/><div class="cf-bar"></div></div>
+          <div class="cf-f"><label data-i18n="cf_msg">Message</label><textarea class="cf-in cf-ta" rows="5" required></textarea><div class="cf-bar"></div></div>
+          <button type="submit" class="cf-submit"><span data-i18n="cf_send">Send Message</span><svg width="15" height="15" viewBox="0 0 15 15"><path d="M2 7.5h11M8.5 2.5l5 5-5 5" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg></button>
+          <div class="cf-ok hidden" id="cf-ok"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9l4 4 8-8" stroke="#72bb72" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span data-i18n="cf_success">Message sent! I'll be in touch soon.</span></div>
+        </form>
+      </div>
+    </div>
+  </section><!-- /view-contact -->
+
+  <script src="script.js"></script>
+</body>
+</html>
