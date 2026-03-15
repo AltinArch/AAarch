@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Architectural Tower — Altin Ademi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@200;300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../style.css"/>
+</head>
+<body class="tower-body">
+  <!-- HERO SECTION -->
+  <section class="tower-hero">
+    <div class="tower-hero-bg"></div>
+    <div class="tower-hero-content">
+      <h1 class="tower-hero-title">Architectural Tower</h1>
+      <div class="tower-hero-desc">A vertical city — blending light, structure, and urban life. The tower’s form is shaped by natural daylight, panoramic views, and a bold structural grid. Every detail is designed for clarity, elegance, and experience.</div>
+      <a href="#gallery" class="tower-hero-btn">Explore More</a>
+    </div>
+  </section>
+  <!-- HIGHLIGHTS SECTION -->
+  <section class="tower-highlights">
+    <div class="highlight-card">
+      <div class="highlight-title">Design Concept</div>
+      <div class="highlight-renders">
+        <img src="img/tower/highlight-design1.jpg" class="highlight-render" alt="Design Render 1"/>
+        <img src="img/tower/highlight-design2.jpg" class="highlight-render" alt="Design Render 2"/>
+      </div>
+      <div class="highlight-desc">The tower’s silhouette emerges from a rational grid, with setbacks and terraces that maximize daylight and city views. The form is both iconic and functional.</div>
+      <a href="#gallery" class="highlight-btn">View Details</a>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-title">Materials</div>
+      <div class="highlight-renders">
+        <img src="img/tower/highlight-material1.jpg" class="highlight-render" alt="Material Render 1"/>
+        <img src="img/tower/highlight-material2.jpg" class="highlight-render" alt="Material Render 2"/>
+      </div>
+      <div class="highlight-desc">A palette of glass, steel, and natural stone creates a timeless, luminous facade. Details emphasize precision and tactile quality.</div>
+      <a href="#gallery" class="highlight-btn">View Details</a>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-title">Floor Plan</div>
+      <div class="highlight-renders">
+        <img src="img/tower/highlight-floor1.jpg" class="highlight-render" alt="Floor Plan 1"/>
+        <img src="img/tower/highlight-floor2.jpg" class="highlight-render" alt="Floor Plan 2"/>
+      </div>
+      <div class="highlight-desc">Open, flexible floor plates allow for a variety of uses. Each level is designed for maximum daylight and efficiency.</div>
+      <a href="#gallery" class="highlight-btn">View Details</a>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-title">Sections</div>
+      <div class="highlight-renders">
+        <img src="img/tower/highlight-section1.jpg" class="highlight-render" alt="Section Render 1"/>
+        <img src="img/tower/highlight-section2.jpg" class="highlight-render" alt="Section Render 2"/>
+      </div>
+      <div class="highlight-desc">Bright, clear sections reveal the vertical logic of the tower, with public and private zones clearly articulated.</div>
+      <a href="#gallery" class="highlight-btn">View Details</a>
+    </div>
+  </section>
+  <!-- GALLERY SECTION -->
+  <section class="tower-gallery-section" id="gallery">
+    <div class="gallery-title">Gallery & Details</div>
+    <div class="tower-gallery">
+      <div class="gallery-item"><img src="img/tower/gallery1.jpg" alt="Tower Render 1"/><div class="gallery-label">Main Facade — Daylight</div></div>
+      <div class="gallery-item"><img src="img/tower/gallery2.jpg" alt="Tower Render 2"/><div class="gallery-label">Night View — Lighting</div></div>
+      <div class="gallery-item"><img src="img/tower/gallery3.jpg" alt="Tower Render 3"/><div class="gallery-label">Lobby & Entrance</div></div>
+      <div class="gallery-item"><img src="img/tower/gallery4.jpg" alt="Tower Render 4"/><div class="gallery-label">Section AA — Public Spaces</div></div>
+      <div class="gallery-item"><img src="img/tower/gallery5.jpg" alt="Tower Render 5"/><div class="gallery-label">Section BB — Private Levels</div></div>
+      <div class="gallery-item"><img src="img/tower/gallery6.jpg" alt="Tower Render 6"/><div class="gallery-label">Terrace & Sky Garden</div></div>
+    </div>
+  </section>
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+<style>
+body.tower-body {
+  background: #f7f7f9;
+  color: #232323;
+  font-family: 'Outfit', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.tower-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background: linear-gradient(120deg, #eaeaea 60%, #d6e0ea 100%);
+  overflow: hidden;
+}
+.tower-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: url('img/tower/hero-render.jpg') center/cover no-repeat;
+  filter: brightness(0.92) blur(1.5px);
+  opacity: 0.92;
+  transition: filter .5s;
+}
+.tower-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 7vw 60px 7vw;
+  max-width: 600px;
+  background: rgba(255,255,255,0.82);
+  border-radius: 0 0 18px 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+}
+.tower-hero-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+  color: #181818;
+  letter-spacing: 1px;
+}
+.tower-hero-desc {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+.tower-hero-btn {
+  display: inline-block;
+  padding: 13px 32px;
+  background: #232323;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Outfit',sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .3s, transform .2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.tower-hero-btn:hover {
+  background: #444;
+  transform: translateY(-2px) scale(1.04);
+}
+/* Highlights */
+.tower-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 32px;
+  margin: 70px auto 60px auto;
+  max-width: 1200px;
+  padding: 0 7vw;
+}
+.highlight-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 32px 24px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform .35s, box-shadow .35s;
+  cursor: pointer;
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+}
+.highlight-card:hover {
+  transform: translateY(-8px) scale(1.03) rotate(-1deg);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.13);
+}
+.highlight-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.3rem;
+  color: #181818;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.highlight-renders {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.highlight-render {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border: 1.5px solid #ececec;
+  background: #f3f3f3;
+}
+.highlight-desc {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+.highlight-btn {
+  margin-top: auto;
+  display: inline-block;
+  padding: 8px 22px;
+  background: #eaeaea;
+  color: #232323;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: 'Outfit',sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .3s, color .3s;
+}
+.highlight-btn:hover {
+  background: #232323;
+  color: #fff;
+}
+/* Gallery/Slider */
+.tower-gallery-section {
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+  padding: 0 7vw;
+}
+.gallery-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 2rem;
+  color: #181818;
+  margin-bottom: 32px;
+  font-weight: 500;
+  text-align: left;
+}
+.tower-gallery {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+}
+.gallery-item {
+  flex: 0 0 340px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f3f3f3;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  position: relative;
+  scroll-snap-align: start;
+  transition: box-shadow .3s;
+}
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: #eaeaea;
+}
+.gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.82);
+  color: #232323;
+  font-size: 0.95rem;
+  font-family: 'Outfit',sans-serif;
+  padding: 10px 18px 8px 18px;
+  border-radius: 0 0 12px 12px;
+  letter-spacing: 0.5px;
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .tower-highlights { grid-template-columns: 1fr; }
+  .tower-gallery { gap: 12px; }
+  .gallery-item { flex-basis: 80vw; }
+}
+@media (max-width: 600px) {
+  .tower-hero-content { padding: 32px 4vw 32px 4vw; }
+  .tower-highlights { padding: 0 2vw; }
+  .tower-gallery-section { padding: 0 2vw; }
+  .gallery-title { font-size: 1.3rem; }
+}
+</style>
+</html>
